@@ -4,9 +4,11 @@ import React from 'react'
 const ImageLoadingTest = () => {
 	return (
 		<div>
-			<Image src="https://picsum.photos/seed/priority/200/300" alt="Logo" width={200} height={200} priority />
-			<div style={{ height: 2000, width: 200 }} />
-			<Image src="https://picsum.photos/seed/no-priority-loading-eager/200/300" alt="Logo" width={200} height={200} priority={false} loading="eager" />
+			<h2>Priority image (should be preloaded)</h2>
+			<Image src="https://picsum.photos/seed/priority/400/300" alt="Logo" width={400} height={300} priority />
+			
+			<h2 className='mt-4'>Priority image (should not get preloaded)</h2>
+			<Image src="https://picsum.photos/seed/no-priority-loading-eager/400/300" alt="Logo" width={400} height={300} priority={false} loading="eager" />
 		</div>
 	)
 }
